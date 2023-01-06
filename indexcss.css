@@ -1,0 +1,49 @@
+html{
+height: 100%;
+}
+body{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height:100%;
+    background-color:rgb(47, 47, 47);
+}
+section{
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 250px);
+    display: inline-block;
+    width: 500px;
+    height: 200px;
+    white-space: nowrap;
+}
+body .button{
+    display: inline-block;
+    background-color: rgb(39, 39, 39);
+    width: 200px;
+    height: 195px;
+    margin: 0px 45px;
+    position: relative;
+    right: 50px;
+    border: 5px solid rgb(255, 111, 0);
+}
+.button span{
+    display: inline-block;
+    position: absolute;
+    width: calc(60% - 10px);
+    padding: 5% 0;
+    height: 15%;
+    top: 40%;
+    left: 20%;
+    color: red;
+    text-align: center;
+    font-size: 25px;
+    font-family: Arial;
+    font-weight: bold;
+    border: 5px solid rgb(255, 111, 0);
+    border-radius: 15px;
+}
+body .button:hover{
+    top: -5px;
+    right: 45px;
+}

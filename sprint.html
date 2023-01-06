@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MentalMath</title>
+    <link rel="stylesheet" href="sprintcss.css">
+</head>
+<body>
+    <section>
+
+        <p class="warning">When Using Division, Number 1 Must Have More Digits Than Number 2</p>
+
+    <div class="sidebar">
+        <button onclick="toggleAddition()" id="addition" class="modebuttons">Addition</button>
+        <button onclick="toggleSubtraction()" id="subtraction" class="modebuttons">Subtraction</button>
+        <button onclick="toggleMultiplication()" id="multiplication" class="modebuttons">Multiplication</button>
+        <button onclick="toggleDivision()" id="division" class="modebuttons">Division</button>
+    </div>
+
+    <div style="display: none;" id="addDigitToggle" class="add digitToggle">
+
+        <button onclick="changeDigit('addDigit1','inc');" class="incDigit1">Increase</button>
+        <div class="Digit1"><p>1</p></div>
+        <button onclick="changeDigit('addDigit1','dec');" class="decDigit1">Decrease</button>
+
+        <button onclick="changeDigit('addDigit2','inc');" class="incDigit2">Increase</button>
+        <div class="Digit2"><p>1</p></div>
+        <button onclick="changeDigit('addDigit2','dec');" class="decDigit2">Decrease</button>
+
+    </div>
+    <div style="display: none;" id="subDigitToggle" class="sub digitToggle">
+
+        <button onclick="changeDigit('subDigit1','inc');" class="incDigit1">Increase</button>
+        <div class="Digit1"><p>1</p></div>
+        <button onclick="changeDigit('subDigit1','dec');" class="decDigit1">Decrease</button>
+
+        <button onclick="changeDigit('subDigit2','inc');" class="incDigit2">Increase</button>
+        <div class="Digit2"><p>1</p></div>
+        <button onclick="changeDigit('subDigit2','dec');" class="decDigit2">Decrease</button>
+
+    </div>
+    <div style="display: none;" id="mulDigitToggle" class="mul digitToggle">
+
+        <button onclick="changeDigit('mulDigit1','inc');" class="incDigit1">Increase</button>
+        <div class="Digit1"><p>1</p></div>
+        <button onclick="changeDigit('mulDigit1','dec');" class="decDigit1">Decrease</button>
+
+        <button onclick="changeDigit('mulDigit2','inc');" class="incDigit2">Increase</button>
+        <div class="Digit2"><p>1</p></div>
+        <button onclick="changeDigit('mulDigit2','dec');" class="decDigit2">Decrease</button>
+
+    </div>
+    <div style="display: none;" id="divDigitToggle" class="div digitToggle">
+
+        <button onclick="changeDigit('divDigit1','inc');" class="incDigit1">Increase</button>
+        <div class="Digit1"><p>1</p></div>
+        <button onclick="changeDigit('divDigit1','dec');" class="decDigit1">Decrease</button>
+
+        <button onclick="changeDigit('divDigit2','inc');" class="incDigit2">Increase</button>
+        <div class="Digit2"><p>1</p></div>
+        <button onclick="changeDigit('divDigit2','dec');" class="decDigit2">Decrease</button>
+
+    </div>
+
+        <button onclick="startSprint()" class="startbutton">Start</button>
+    </section>
+        <button onclick="mainMenu()" class="backbutton">Go Back</button>
+
+
+
+
+
+
+
+
+
+        <div id="playArea">
+            <p id="timer" class="info">Time: 0</p>
+            <p id="progress" class="info">0 / 40</p>
+
+            <h2 id="incorrect">Incorrect: 5 Seconds Added</h2>
+            <h2 id="givescorrectanswer">Correct Answer: </h2>
+            <h2 id="givesyouranswer">You Answered: </h2>
+
+            <h2 id="youwon">You Won!</h2>
+            <h2 id="finaltime">Final time: </h2>
+            <h2 id="finaldeaths">Deaths: </h2>
+
+            <div id="questionArea">
+    
+                <p id="number1" class="question">37</p><br>
+                <p id="number2" class="question">- 45</p>
+    
+            </div>
+            <form onsubmit="checkanswer(); return false">
+            <input id="inputAnswer" type="number" oninput="oninputt()" onfocusout="focusback()" onkeydown="return event.keyCode !== 69 && event.keyCode !== 187">
+        </form>
+        </div>
+
+
+    <script src="sprintjs.js"></script>
+</body>
+</html>
